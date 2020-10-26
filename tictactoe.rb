@@ -31,9 +31,9 @@ end
 
 class Game
 
-  @@total_games = 0
-  @@x_wins = 0
-  @@o_wins = 0
+  @total_games = 0
+  @x_wins = 0
+  @o_wins = 0
 
   def initialize
     start_game()
@@ -143,14 +143,14 @@ class Game
     case winner
     when "X"
       puts "\tX wins! \n"
-      @@x_wins += 1
+      @x_wins += 1
     when "O" 
       puts "\tO wins! \n"
-      @@o_wins += 1
+      @o_wins += 1
     else
       puts "\tNo winner. \n"
     end
-    @@total_games += 1
+    @total_games += 1
     puts "\tPlay again? (Y/N) \n"
     @new_game = gets.chomp.upcase
     if @new_game == "Y"
