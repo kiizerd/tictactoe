@@ -1,28 +1,28 @@
 class Player
 
-  attr_reader :shape, :name
+  attr_reader :name, :shape
 
-  def initialize(number)
-    @name = "Player #{number}"
-    @score = 0
-    @shape = number == 1 ? "X" : "O"
+  def initialize(num)
+    @name = "Player#{num}"
+    @shape = num == 1 ? "X" : "O"
   end
 
   def make_move
-    choice = gets.chomp.to_i
-    while choice < 1 || choice > 9
-      puts "Error. Try again. \n"
-      choice = gets.chomp.to_i
-    end
-    choice 
+    rand 9
   end
 end
 
 class Human < Player
+  def make_move
+    move = gets.chomp.to_i
+    until move >= 1 and move <= 9
+      puts "Error, input outside range (1 - 9)"
+      move = gets.chomp.to_i
+    end
+    move
+  end
 end
 
-class Computer < Player
-  def make_move
-    rand(1..9) 
-  end
+class Comp < Player
+
 end
