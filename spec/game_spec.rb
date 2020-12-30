@@ -16,7 +16,7 @@ describe Game do
 
     context 'when 1 human player' do
       it 'returns an array with 1 Human and 1 Comp Player' do
-        players = game_players.get_players
+        players = game_players.get_players 1
         expect(players[0]).to be_a(Human)
       end
     end

@@ -2,6 +2,7 @@
 
 require_relative 'player'
 
+# main class
 class Game
   attr_reader :players, :array, :display
 

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # Simple object for generating input
 class Player
   attr_reader :name, :shape
